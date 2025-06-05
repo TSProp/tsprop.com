@@ -1,0 +1,985 @@
+/* ---------------------------
+   Font and Typography
+---------------------------- */
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #fdfbf7; /* ✅ Light cream */
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+h1, h2, h3, .brand-name {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Container Utility */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ---------------------------
+   Global Heading & Paragraph Styles
+---------------------------- */
+
+h2 {
+  font-size: 2rem;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+
+/* ---------------------------
+   Header Layout
+---------------------------- */
+
+.site-header {
+  background-color: #f7f3ec;  /* ✅ Matches footer */
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.logo {
+  height: 96px;
+  width: auto;
+}
+
+.brand-name {
+  margin-left: 10px;
+  font-size: 1.25rem;
+  white-space: nowrap;
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+  display: none;
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-right: 20px;
+}
+
+.nav-links a:not(.portal-button) {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.nav-links a:not(.portal-button):hover {
+  text-decoration: underline;
+}
+
+.portal-button {
+  background-color: #111;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.portal-button:hover {
+  background-color: #333;
+}
+
+/* Bold Active Nav */
+.nav-link.active {
+  font-weight: bold !important;
+  color: #000 !important;
+}
+
+
+
+/* ---------------------------
+   Mobile Layout
+---------------------------- */
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 60px;
+    padding: 0 1rem;
+    align-items: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px 0;
+  }
+
+  .portal-button {
+    background-color: #111;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    min-width: 200px;
+    text-align: center;
+  }
+}
+
+/* ---------------------------
+   Footer Styles
+---------------------------- */
+
+.site-footer {
+  background-color: #f7f3ec; /* ✅ Slightly darker cream */
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer-logo {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-brand {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.footer-info {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.footer-column a {
+  display: block;
+  margin-bottom: 8px;
+  color: #000;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  padding-left: 20px;
+  margin: 0;
+  list-style-type: disc;
+}
+
+.footer-column ul ul {
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+.footer-map iframe {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  border: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 20px 10px;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .footer-column:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 100px;
+    display: block;
+    margin: 0 auto 10px auto;
+  }
+
+  .footer-brand {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    font-weight: bold;
+  }
+
+  .footer-info {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .footer-column:nth-child(2) a {
+    margin-bottom: 4px;
+  }
+
+  .footer-column h3 {
+    margin-bottom: 6px;
+  }
+
+  .footer-column ul,
+  .footer-column li {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .footer-column ul ul {
+    padding-left: 15px;
+    list-style-position: inside;
+  }
+
+  .footer-map iframe {
+    max-width: 90vw;
+    height: 160px;
+    border: 0;
+  }
+}
+
+/* ---------------------------
+   Home Page Styles
+---------------------------- */
+
+.home-hero {
+  padding: 2rem 1rem;
+}
+
+.home-title {
+  font-size: 2rem;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  color: #222;
+  margin-left: 15vw;
+  margin-bottom: 1rem;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.slogan h2 {
+  font-size: 2rem;
+  font-family: 'Merriweather', serif;
+  margin: 0.2em 0;
+}
+
+.description {
+  max-width: 700px;
+  margin: 1.5rem auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.about-button {
+  display: inline-block;
+  background-color: #111;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.about-button:hover {
+  background-color: #333;
+}
+
+.home-logo {
+  margin-top: 2rem;
+  max-width: 180px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------------------------
+   Features Section
+---------------------------- */
+
+.features-section {
+  padding: 4rem 1rem;
+  background-color: #fdfbf7; /* ✅ match the page background */
+  text-align: center;
+}
+
+
+.features-title {
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.features-subtitle {
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature {
+  padding: 0 1rem;
+}
+
+.feature .icon {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ---------------------------
+   CTA Section
+---------------------------- */
+
+.cta-section {
+  background-color: #111;
+  color: #f1f1f1;
+  padding: 10rem 2rem;
+  text-align: center;
+}
+
+.cta-text {
+  font-family: 'Merriweather', serif;
+  font-size: 1.6rem;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.7;
+}
+
+.cta-button {
+  background-color: #fff;
+  color: #111;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+.cta-section p {
+  color: #fff;
+}
+
+/* ---------------------------
+   Baselane Section
+---------------------------- */
+
+.baselane-section {
+  padding: 4rem 1rem;
+  background-color: #fdfbf7;
+  text-align: center;
+}
+
+.baselane-heading {
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.baselane-subtitle {
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.baselane-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.baselane-left,
+.baselane-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.baselane-left {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.baselane-right {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.baselane-benefits-title {
+  font-family: 'Merriweather', serif;
+  font-size: 1.3rem;
+}
+
+.baselane-benefits {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.baselane-icon {
+  max-width: 150px;
+  border-radius: 16px;
+  align-self: center;
+}
+
+.baselane-logo {
+  max-width: 180px;
+  border-radius: 12px;
+  background: white;
+  padding: 1rem;
+  align-self: center;
+}
+
+.baselane-button-wrapper {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.baselane-button {
+  background-color: #111;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.baselane-button:hover {
+  background-color: #333;
+}
+
+.current-properties {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Merriweather', serif;
+}
+
+.intro-text p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.property-group {
+  margin-top: 3rem;
+  padding: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.property-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+}
+
+.property-address-note {
+  font-size: 1.125rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.tenant-list {
+  list-style-type: disc;
+  padding-left: 2rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.property-group:last-of-type .property-title {
+  border-top: 2px solid #999;
+  padding-top: 1rem;
+  margin-top: 3rem;
+  color: #444;
+}
+
+.slide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none;    /* Firefox */
+    user-select: none;         /* Standard */
+  
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 700px;
+  height: 500px; /* ensures smooth transitions with absolute slides */
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(255,255,255,0.7);
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50%;
+  user-select: none;
+  z-index: 1;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* ---------------------------
+   Tenants Section
+---------------------------- */
+
+.tenants-section {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.page-title.left-align {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.tenants-title {
+  font-size: 2rem;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  color: #222;
+  margin-left: 15vw;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .page-title.left-align {
+    margin-left: 2rem;
+  }
+}
+
+.spacer {
+  height: 4rem;
+}
+
+.why-baselane {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.why-baselane .button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.divider {
+  margin: 3rem auto;
+  width: 100px;
+  border-top: 1px solid #aaa;
+}
+
+.tenant-benefits {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.benefit-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.benefit h3 {
+  font-weight: 700;
+}
+
+.how-it-works {
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 1rem;
+}
+
+.how-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.how-left, .how-right {
+  flex: 1;
+}
+
+.baselane-logo {
+  max-width: 220px; /* increased from 180px */
+  border-radius: 12px;
+  background: white;
+  padding: 1rem;
+  align-self: center;
+}
+
+
+.how-right iframe {
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.security-section {
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.security-section p {
+  margin-top: 1rem;
+}
+
+.call-to-action {
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.call-to-action a {
+  color: #000;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .benefit-grid {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .how-grid {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* Align tenant title like Home page */
+.home-title {
+  font-size: 2rem;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  color: #222;
+  margin-left: 15vw;
+  margin-bottom: 1rem;
+}
+
+/* Optional: match heading sizes globally */
+h2 {
+  font-size: 2rem;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.centered-title {
+  font-size: 2rem;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+  margin: 2rem auto 1.5rem auto;
+}
+
+.home-title {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+
+/* ---------------------------
+   Team Section (About Page)
+---------------------------- */
+
+.mission-header {
+  font-size: 2rem;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  max-width: 100%;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  margin-bottom: 2rem;
+}
+
+.team-section {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.team-photo {
+  width: 200px;
+  height: auto;
+  border-radius: 5% !important;
+  object-fit: contain;
+  aspect-ratio: auto !important;
+}
+
+.team-member > div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.team-member p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .team-member {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team-photo {
+    width: 70vw;
+    margin-bottom: 1rem;
+  }
+
+  .mission-header {
+    font-size: 2rem;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    margin: 2rem auto;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  
+}
+
+@media (min-width: 769px) {
+  .team-member.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+
+/* ---------------------------
+   History Section (About Page)
+---------------------------- */
+
+.history-section {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.history-section p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: left;
+  margin-top: 1rem;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TSProp - Current Properties</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Header/Footer Loader Script -->
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <div class="page">
+    <!-- Dynamic Header -->
+    <div id="header"></div>
+
+    <!-- Page Content -->
+    <main class="home-hero">
+
+      <section class="hero-content">
+        <p class="description">
+          True Stone Properties owns and manages five commercial buildings across the east side of Indianapolis.
+          Each location is carefully maintained with attention to quality, cleanliness, and long-term value.
+        </p>
+        <p class="description">
+          At this time, all properties are fully leased and we do not have any current availability.
+          Please check back for future opportunities or reach out to express interest.
+        </p>
+      </section>
+
+      <section class="property-group">
+        <h2 class="property-title">1311 Shadeland Ave</h2>
+        <p class="description">
+          This multi-suite commercial office building offers a professional setting with convenient access to I-70 and ample parking. It currently serves various local businesses and service providers.
+        </p>
+        <div class="slideshow-container" id="slideshow-1311">
+          <img class="slide slide-1311" src="Pictures/1311_1.jpg" alt="1311 slide 1">
+          <img class="slide slide-1311" src="Pictures/1311_2.jpg" alt="1311 slide 2">
+          <img class="slide slide-1311" src="Pictures/1311_3.jpg" alt="1311 slide 3">
+          <img class="slide slide-1311" src="Pictures/1311_4.jpg" alt="1311 slide 4">
+          <img class="slide slide-1311" src="Pictures/1311_5.jpg" alt="1311 slide 5">
+          <button class="prev" onclick="changeSlide('1311', -1)">❮</button>
+          <button class="next" onclick="changeSlide('1311', 1)">❯</button>
+        </div>
+      </section>
+
+      <section class="property-group">
+        <h2 class="property-title">1641 Shadeland Ave</h2>
+        <p class="description">
+          This professional office building features multiple suites with a variety of layouts suitable for health, legal, or service-oriented businesses. It is fully leased and centrally located on Indianapolis's east side.
+        </p>
+        <div class="slideshow-container" id="slideshow-1641">
+          <img class="slide slide-1641" src="Pictures/1641_1.jpg" alt="1641 slide 1">
+          <img class="slide slide-1641" src="Pictures/1641_2.jpg" alt="1641 slide 2">
+          <img class="slide slide-1641" src="Pictures/1641_3.jpg" alt="1641 slide 3">
+          <img class="slide slide-1641" src="Pictures/1641_4.jpg" alt="1641 slide 4">
+          <button class="prev" onclick="changeSlide('1641', -1)">❮</button>
+          <button class="next" onclick="changeSlide('1641', 1)">❯</button>
+        </div>
+      </section>
+
+      <section class="property-group">
+        <h2 class="property-title">5198 Allisonville Rd</h2>
+        <p class="description">
+          This building is a mixed-use space with retail, dining, and office suites located in a high-traffic area. It provides a welcoming and flexible space for a variety of tenants.
+        </p>
+        <div class="slideshow-container" id="slideshow-5170">
+          <img class="slide slide-5170" src="Pictures/5170_1.jpg" alt="5170 slide 1">
+          <img class="slide slide-5170" src="Pictures/5170_2.jpg" alt="5170 slide 2">
+          <img class="slide slide-5170" src="Pictures/5170_3.jpg" alt="5170 slide 3">
+          <img class="slide slide-5170" src="Pictures/5170_4.jpg" alt="5170 slide 4">
+          <img class="slide slide-5170" src="Pictures/5170_5.jpg" alt="5170 slide 5">
+          <button class="prev" onclick="changeSlide('5170', -1)">❮</button>
+          <button class="next" onclick="changeSlide('5170', 1)">❯</button>
+        </div>
+      </section>
+
+      <section class="property-group">
+        <h2 class="property-title">8141 E 30th St</h2>
+        <p class="description">
+          This industrial facility is designed to support warehousing, logistics, and light manufacturing operations. Its large bays and flexible interior spaces make it ideal for businesses with storage and production needs.
+        </p>
+        <div class="slideshow-container" id="slideshow-8141">
+          <img class="slide slide-8141" src="Pictures/8141_1.jpg" alt="8141 slide 1">
+          <img class="slide slide-8141" src="Pictures/8141_2.jpg" alt="8141 slide 2">
+          <img class="slide slide-8141" src="Pictures/8141_3.jpg" alt="8141 slide 3">
+          <img class="slide slide-8141" src="Pictures/8141_4.jpg" alt="8141 slide 4">
+          <img class="slide slide-8141" src="Pictures/8141_5.jpg" alt="8141 slide 5">
+          <button class="prev" onclick="changeSlide('8141', -1)">❮</button>
+          <button class="next" onclick="changeSlide('8141', 1)">❯</button>
+        </div>
+      </section>
+
+      <section class="property-group">
+        <h2 class="property-title">6901 E 10th St</h2>
+        <p class="description">
+          This west-side commercial building offers flexible suite options for service-based businesses and professional offices. The building is easily accessible and located near major roadways.
+        </p>
+        <div class="slideshow-container" id="slideshow-6901">
+          <img class="slide slide-6901" src="Pictures/6901_1.jpg" alt="6901 slide 1">
+          <img class="slide slide-6901" src="Pictures/6901_2.jpg" alt="6901 slide 2">
+          <img class="slide slide-6901" src="Pictures/6901_3.jpg" alt="6901 slide 3">
+          <img class="slide slide-6901" src="Pictures/6901_4.jpg" alt="6901 slide 4">
+          <img class="slide slide-6901" src="Pictures/6901_5.jpg" alt="6901 slide 5">
+          <button class="prev" onclick="changeSlide('6901', -1)">❮</button>
+          <button class="next" onclick="changeSlide('6901', 1)">❯</button>
+        </div>
+      </section>
+
+      <section class="property-group">
+        <h2 class="property-title">6054 E 10th St</h2>
+        <p class="description">
+          6054 E 10th St serves as the main office for True Stone Properties. While not available for lease, this location is the operational hub for property management, maintenance coordination, and tenant support across all properties.
+        </p>
+      </section>
+    </main>
+
+    <!-- Dynamic Footer -->
+    <div id="footer"></div>
+  </div>
+</body>
+</html>
